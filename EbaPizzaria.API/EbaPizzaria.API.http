@@ -1,0 +1,6 @@
+@EbaPizzaria.API_HostAddress = http://localhost:5290
+
+GET {{EbaPizzaria.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
