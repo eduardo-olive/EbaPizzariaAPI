@@ -70,3 +70,5 @@ C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\refint\EbaPizzaria.API.dll
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.genruntimeconfig.cache
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\ref\EbaPizzaria.API.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

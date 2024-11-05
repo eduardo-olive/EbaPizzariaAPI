@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cliente",
-        "Type": "EbaPizzaria.API.Models.Cliente",
+        "Name": "clienteDTO",
+        "Type": "EbaPizzaria.API.DTOs.ClienteDTO",
         "IsRequired": true
       }
     ],
@@ -24,8 +24,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cliente",
-        "Type": "EbaPizzaria.API.Models.Cliente",
+        "Name": "clienteDTO",
+        "Type": "EbaPizzaria.API.DTOs.ClienteDTO",
         "IsRequired": true
       }
     ],

@@ -1,4 +1,5 @@
 using EbaPizzaria.API.Interfaces;
+using EbaPizzaria.API.Mappings;
 using EbaPizzaria.API.Models;
 using EbaPizzaria.API.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,8 @@ builder.Services.AddDbContext<EbaPizzariaContext>(options =>
 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
+
+builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
 
 var app = builder.Build();
 
