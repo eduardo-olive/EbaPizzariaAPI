@@ -19,6 +19,14 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[Ingredientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IngredientesPizza]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[ItensPedido]",
          "ObjectType": 0
       },

@@ -18,6 +18,7 @@ builder.Services.AddDbContext<EbaPizzariaContext>(options =>
 });
 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
 
 var app = builder.Build();
 

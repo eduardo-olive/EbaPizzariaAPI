@@ -28,4 +28,8 @@ public partial class Pizza
 
     [InverseProperty("IdPizzaNavigation")]
     public virtual ICollection<ItensPedido> ItensPedido { get; set; } = new List<ItensPedido>();
+
+    [ForeignKey("IdPizza")]
+    [InverseProperty("IdPizza")]
+    public virtual ICollection<Ingredientes> IdIngrediente { get; set; } = new List<Ingredientes>();
 }

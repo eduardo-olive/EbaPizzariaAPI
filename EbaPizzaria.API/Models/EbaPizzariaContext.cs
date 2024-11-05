@@ -15,6 +15,8 @@ public partial class EbaPizzariaContext : DbContext
 
     public virtual DbSet<Cliente> Cliente { get; set; }
 
+    public virtual DbSet<Ingredientes> Ingredientes { get; set; }
+
     public virtual DbSet<ItensPedido> ItensPedido { get; set; }
 
     public virtual DbSet<Pedido> Pedido { get; set; }
@@ -23,22 +25,51 @@ public partial class EbaPizzariaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Ingredientes>(entity =>
+        {
+            entity
+                .HasMany(d => d.IdPizza)
+                .WithMany(p => p.IdIngrediente)
+                .UsingEntity<Dictionary<string, object>>(
+                    "IngredientesPizza",
+                    r => r.HasOne<Pizza>().WithMany()
+                        .HasForeignKey("IdPizza")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK_IngredientesPizza_Pizza"),
+                    l => l.HasOne<Ingredientes>().WithMany()
+                        .HasForeignKey("IdIngrediente")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK_IngredientesPizza_Ingredientes"),
+                    j =>
+                    {
+                        j.HasKey("IdIngrediente", "IdPizza").HasName("FK_INGREDIENTES_PIZZA");
+                    });
+        });
+
         modelBuilder.Entity<ItensPedido>(entity =>
         {
-            entity.HasKey(e => new { e.IdPedido, e.IdPizza }).HasName("FK_PEDIDO_PIZZA");
+            entity
+                .HasKey(e => new { e.IdPedido, e.IdPizza })
+                .HasName("FK_PEDIDO_PIZZA");
 
-            entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.ItensPedido)
+            entity
+                .HasOne(d => d.IdPedidoNavigation)
+                .WithMany(p => p.ItensPedido)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ItensPedido_Pedido");
 
-            entity.HasOne(d => d.IdPizzaNavigation).WithMany(p => p.ItensPedido)
+            entity
+                .HasOne(d => d.IdPizzaNavigation)
+                .WithMany(p => p.ItensPedido)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ItensPedido_Pizza");
         });
 
         modelBuilder.Entity<Pedido>(entity =>
         {
-            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Pedido)
+            entity
+                .HasOne(d => d.IdClienteNavigation)
+                .WithMany(p => p.Pedido)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Pedido_Cliente");
         });
