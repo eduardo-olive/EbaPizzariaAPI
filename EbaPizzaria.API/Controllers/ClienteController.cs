@@ -21,18 +21,51 @@ namespace EbaPizzaria.API.Controllers
 		{
 			return Ok(await _clienteRepository.SelecionarTodos());
 		}
+
+		[HttpGet("{id}")]
+		public async Task<ActionResult<Cliente>> Index(int id)
+		{
+			return Ok(await _clienteRepository.SelecionaById(id));
+		}
+
 		[HttpPost]
-		public async Task<ActionResult> Post(Cliente cliente)
+		public async Task<ActionResult> CadastrarCliente(Cliente cliente)
 		{
 			_clienteRepository.Incluir(cliente);
 			if (await _clienteRepository.SalvarTodasAlteracoes())
 			{
 				return Ok(cliente);
 			}
-			else
+			
+			return BadRequest("Falha ao tentar cadastrar o cliente.");
+		}
+
+		[HttpPut]
+		public async Task<ActionResult> AlterarCliente(Cliente cliente)
+		{
+			_clienteRepository.Alterar(cliente);
+			if (await _clienteRepository.SalvarTodasAlteracoes())
 			{
-				return BadRequest();
+				return Ok(cliente);
 			}
+
+			return BadRequest("FAlha ao tentar alterar o cliente.");
+		}
+
+		[HttpDelete("{id}")]
+		public async Task<ActionResult> ExcluirCliente(int id)
+		{
+			Cliente cliente = await _clienteRepository.SelecionaById(id);
+			if (cliente == null)
+				return NotFound();
+
+			_clienteRepository.Excluir(cliente);
+			if (await _clienteRepository.SalvarTodasAlteracoes())
+			{
+				return NoContent();
+			}
+			
+			return BadRequest("Falha ao tentar excluir o cliente.");
 		}
 	}
 }
