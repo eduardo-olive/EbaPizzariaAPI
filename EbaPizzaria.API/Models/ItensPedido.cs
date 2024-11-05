@@ -20,7 +20,7 @@ public partial class ItensPedido
     [Column(TypeName = "decimal(4, 2)")]
     public decimal ValorUnitario { get; set; }
 
-    public int Quatidade { get; set; }
+    public int Quantidade { get; set; }
 
     [Column(TypeName = "decimal(10, 2)")]
     public decimal ValorTotal { get; set; }

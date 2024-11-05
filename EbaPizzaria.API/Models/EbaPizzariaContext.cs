@@ -23,14 +23,9 @@ public partial class EbaPizzariaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Cliente>(entity =>
-        {
-            entity.Property(e => e.Id).ValueGeneratedNever();
-        });
-
         modelBuilder.Entity<ItensPedido>(entity =>
         {
-            entity.HasKey(e => new { e.IdPedido, e.IdPizza }).HasName("Fk_Pedido_Pizza");
+            entity.HasKey(e => new { e.IdPedido, e.IdPizza }).HasName("FK_PEDIDO_PIZZA");
 
             entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.ItensPedido)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -43,16 +38,9 @@ public partial class EbaPizzariaContext : DbContext
 
         modelBuilder.Entity<Pedido>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedNever();
-
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Pedido)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Pedido_Cliente");
-        });
-
-        modelBuilder.Entity<Pizza>(entity =>
-        {
-            entity.Property(e => e.Id).ValueGeneratedNever();
         });
 
         OnModelCreatingPartial(modelBuilder);

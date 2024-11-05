@@ -15,7 +15,8 @@ public partial class Pedido
 
     public int IdCliente { get; set; }
 
-    public DateOnly DataPedido { get; set; }
+    [Column(TypeName = "datetime")]
+    public DateTime DataPedido { get; set; }
 
     [Column(TypeName = "decimal(18, 2)")]
     public decimal ValorPedido { get; set; }

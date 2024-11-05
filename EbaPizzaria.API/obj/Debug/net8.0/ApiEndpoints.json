@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "EbaPizzaria.API.Controllers.ClienteController",
+    "Method": "Post",
+    "RelativePath": "api/Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "EbaPizzaria.API.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EbaPizzaria.API.Controllers.ClienteController",
+    "Method": "Index",
+    "RelativePath": "api/Cliente/selecionarTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EbaPizzaria.API.Models.Cliente, EbaPizzaria.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
