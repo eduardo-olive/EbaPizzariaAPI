@@ -9,6 +9,7 @@ namespace EbaPizzaria.API.Mappings
         public EntitiesToDTOMappingProfile()
         {
             CreateMap<Cliente, ClienteDTO>().ReverseMap();
+            CreateMap<Pizza, PizzaDTO>().ReverseMap();
         }
     }
 }

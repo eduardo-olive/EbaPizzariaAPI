@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Dev\\EbaPizzaria\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0285E76-9F08-42BA-AC04-078BDB226319}|EbaPizzaria.API\\EbaPizzaria.API.csproj|c:\\dev\\ebapizzaria\\ebapizzaria.api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0285E76-9F08-42BA-AC04-078BDB226319}|EbaPizzaria.API\\EbaPizzaria.API.csproj|solutionrelative:ebapizzaria.api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0285E76-9F08-42BA-AC04-078BDB226319}|EbaPizzaria.API\\EbaPizzaria.API.csproj|c:\\dev\\ebapizzaria\\ebapizzaria.api\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0285E76-9F08-42BA-AC04-078BDB226319}|EbaPizzaria.API\\EbaPizzaria.API.csproj|solutionrelative:ebapizzaria.api\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "EbaPizzaria.API\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "EbaPizzaria.API\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwD8AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:56:34.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PizzaController.cs",
+              "DocumentMoniker": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\PizzaController.cs",
+              "RelativeDocumentMoniker": "EbaPizzaria.API\\Controllers\\PizzaController.cs",
+              "ToolTip": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\PizzaController.cs",
+              "RelativeToolTip": "EbaPizzaria.API\\Controllers\\PizzaController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAQwEEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:41:02.296Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"

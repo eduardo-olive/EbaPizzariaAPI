@@ -49,7 +49,8 @@ namespace EbaPizzaria.API.Controllers
 			_clienteRepository.Incluir(cliente);
 			if (await _clienteRepository.SalvarTodasAlteracoes())
 			{
-				return Ok(cliente);
+				clienteDTO.Id = cliente.Id;
+				return Ok(clienteDTO);
 			}
 			
 			return BadRequest("Falha ao tentar cadastrar o cliente.");
@@ -73,7 +74,7 @@ namespace EbaPizzaria.API.Controllers
 			_clienteRepository.Alterar(cliente);
 			if (await _clienteRepository.SalvarTodasAlteracoes())
 			{
-				return Ok(cliente);
+				return Ok(clienteDTO);
 			}
 
 			return BadRequest("FAlha ao tentar alterar o cliente.");

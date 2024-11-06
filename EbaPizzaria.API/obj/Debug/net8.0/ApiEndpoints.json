@@ -102,22 +102,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pizza",
-        "Type": "EbaPizzaria.API.Models.Pizza",
+        "Name": "pizzaDTO",
+        "Type": "EbaPizzaria.API.DTOs.PizzaDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "EbaPizzaria.API.Models.Pizza",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "EbaPizzaria.API.Controllers.PizzaController",
@@ -128,22 +118,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pizza",
-        "Type": "EbaPizzaria.API.Models.Pizza",
+        "Name": "pizzaDTO",
+        "Type": "EbaPizzaria.API.DTOs.PizzaDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "EbaPizzaria.API.Models.Pizza",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "EbaPizzaria.API.Controllers.PizzaController",
@@ -161,7 +141,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EbaPizzaria.API.Models.Pizza",
+        "Type": "EbaPizzaria.API.DTOs.PizzaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -197,7 +177,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EbaPizzaria.API.Models.Pizza, EbaPizzaria.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EbaPizzaria.API.DTOs.PizzaDTO, EbaPizzaria.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
