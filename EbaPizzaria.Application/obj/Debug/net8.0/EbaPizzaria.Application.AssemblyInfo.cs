@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EbaPizzaria.API")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EbaPizzaria.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+537ddbf875cee878b994d078c0c4fbc7924fe550")]
-[assembly: System.Reflection.AssemblyProductAttribute("EbaPizzaria.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EbaPizzaria.API")]
+[assembly: System.Reflection.AssemblyProductAttribute("EbaPizzaria.Application")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EbaPizzaria.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
