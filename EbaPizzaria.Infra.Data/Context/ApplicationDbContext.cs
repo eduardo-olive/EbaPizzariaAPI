@@ -6,9 +6,9 @@ namespace EbaPizzaria.Infra.Data.Context
 	{
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
         
-        public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<Pizza> Pizza { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{

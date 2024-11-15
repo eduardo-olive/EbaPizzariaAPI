@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eBSWLq8/dhCCedjuPJjN5qcu2OWyeJeuvckVThToA8ytxU9zFyMBYTprsZH9DgEGTOmTcyautlxdtTYKCjJbZQ==",
+  "dgSpecHash": "i6c2iXfBXo9UtVTjXRSVay560EUJF1s3A6/UbMFE3UMkKT+vLjR2m7K3eHyDNSpz07B/Oyygl+su4k7j4tSHYA==",
   "success": true,
   "projectFilePath": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.Infra.Ioc\\EbaPizzaria.Infra.Ioc.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
