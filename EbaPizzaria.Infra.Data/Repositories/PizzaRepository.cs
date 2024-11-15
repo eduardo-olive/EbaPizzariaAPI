@@ -2,6 +2,7 @@
 using EbaPizzaria.Domain.Interfaces;
 using EbaPizzaria.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EbaPizzaria.Infra.Data.Repositories
 {
@@ -13,20 +14,24 @@ namespace EbaPizzaria.Infra.Data.Repositories
         {
             _ebaPizzariaContext = ebaPizzariaContext;
         }
-        public void Alterar(Pizza pizza)
+        public async Task<Pizza> Alterar(Pizza pizza)
 		{
 			_ebaPizzariaContext.Entry(pizza).State = EntityState.Modified;
 			_ebaPizzariaContext.Pizza.Update(pizza);
+			return pizza;
 		}
 
-		public void Exlcuir(Pizza pizza)
+		public async Task<Pizza> Exlcuir(int id)
 		{
-			_ebaPizzariaContext.Pizza.Remove(pizza);
+			Pizza pizzaExcluida = await _ebaPizzariaContext.Pizza.Where(x => x.Id == id).FirstOrDefaultAsync();
+			_ebaPizzariaContext.Pizza.Remove(pizzaExcluida);
+			return pizzaExcluida;
 		}
 
-		public void Incluir(Pizza pizza)
+		public async Task<Pizza> Incluir(Pizza pizza)
 		{
 			_ebaPizzariaContext.Pizza.Add(pizza);
+			return pizza;
 		}
 
 		public async Task<bool> SalvarTodasAlteracoes()

@@ -14,20 +14,24 @@ namespace EbaPizzaria.Infra.Data.Repositories
             _ebaPizzariaContext = ebaPizzariaContext;
         }
 
-        public void Alterar(Cliente cliente)
+        public async Task<Cliente> Alterar(Cliente cliente)
 		{
 			_ebaPizzariaContext.Entry(cliente).State = EntityState.Modified;
 			_ebaPizzariaContext.Cliente.Update(cliente);
+			return cliente;
 		}
 
-		public void Excluir(Cliente cliente)
+		public async Task<Cliente> Excluir(int id)
 		{
+			Cliente cliente = await _ebaPizzariaContext.Cliente.Where(x => x.Id == id).FirstOrDefaultAsync();
 			_ebaPizzariaContext.Cliente.Remove(cliente);
+			return cliente;
 		}
 
-		public void Incluir(Cliente cliente)
+		public async Task<Cliente> Incluir(Cliente cliente)
 		{
 			_ebaPizzariaContext.Cliente.Add(cliente);
+			return cliente;
 		}
 
 		public async Task<bool> SalvarTodasAlteracoes()

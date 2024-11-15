@@ -4,11 +4,10 @@ namespace EbaPizzaria.Domain.Interfaces
 {
 	public interface IPizzaRepository
 	{
-		void Incluir(Pizza pizza);
-		void Alterar(Pizza pizza);
-		void Exlcuir(Pizza pizza);
+		Task<Pizza> Incluir(Pizza pizza);
+		Task<Pizza> Alterar(Pizza pizza);
+		Task<Pizza> Exlcuir(int id);
 		Task<IEnumerable<Pizza>> SelecionarTodos();
 		Task<Pizza> SelecionarById(int id);
-		Task<bool> SalvarTodasAlteracoes();
 	}
 }

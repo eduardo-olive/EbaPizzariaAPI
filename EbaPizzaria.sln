@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EbaPizzaria.Infra.Ioc", "Eb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EbaPizzaria.Application", "EbaPizzaria.Application\EbaPizzaria.Application.csproj", "{B5573BA6-A9B5-47E5-8BFF-9305700DD5EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbaPizzaria.API", "EbaPizzaria.API\EbaPizzaria.API.csproj", "{45B45A1E-B53D-4BF9-9A23-879C4D114753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EbaPizzaria.API", "EbaPizzaria.API\EbaPizzaria.API.csproj", "{45B45A1E-B53D-4BF9-9A23-879C4D114753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
