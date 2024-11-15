@@ -1,8 +1,4 @@
-using EbaPizzaria.API.Interfaces;
-using EbaPizzaria.API.Mappings;
-using EbaPizzaria.API.Models;
-using EbaPizzaria.API.Repositories;
-using Microsoft.EntityFrameworkCore;
+using EbaPizzaria.Infra.Ioc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,17 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddInfrastructureSwagger();
+//builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<EbaPizzariaContext>(options => 
-{
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
-builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
-
-builder.Services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -29,7 +18,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI();
+	app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EbaPizzaria.API v1"));
 }
 
 app.UseHttpsRedirection();

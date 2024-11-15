@@ -1,0 +1,12 @@
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\bin\Debug\net8.0\EbaPizzaria.Domain.deps.json
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\bin\Debug\net8.0\EbaPizzaria.Domain.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\bin\Debug\net8.0\EbaPizzaria.Domain.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.AssemblyInfoInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.AssemblyInfo.cs
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.csproj.CoreCompileInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.sourcelink.json
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\refint\EbaPizzaria.Domain.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\EbaPizzaria.Domain.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Domain\obj\Debug\net8.0\ref\EbaPizzaria.Domain.dll

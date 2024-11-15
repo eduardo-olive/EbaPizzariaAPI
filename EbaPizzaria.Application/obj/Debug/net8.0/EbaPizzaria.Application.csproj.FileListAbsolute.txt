@@ -1,0 +1,16 @@
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\bin\Debug\net8.0\EbaPizzaria.Application.deps.json
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\bin\Debug\net8.0\EbaPizzaria.Application.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\bin\Debug\net8.0\EbaPizzaria.Application.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\bin\Debug\net8.0\EbaPizzaria.Domain.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\bin\Debug\net8.0\EbaPizzaria.Domain.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.csproj.AssemblyReference.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.AssemblyInfoInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.AssemblyInfo.cs
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.csproj.CoreCompileInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.sourcelink.json
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizza.7C86AAF0.Up2Date
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\refint\EbaPizzaria.Application.dll
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\EbaPizzaria.Application.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Application\obj\Debug\net8.0\ref\EbaPizzaria.Application.dll
