@@ -48,5 +48,6 @@ namespace EbaPizzaria.Infra.Data.Repositories
 		{
 			return await _ebaPizzariaContext.Pizzas.ToListAsync();
 		}
+
 	}
 }

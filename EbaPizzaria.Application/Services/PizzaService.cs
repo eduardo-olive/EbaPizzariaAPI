@@ -21,12 +21,14 @@ namespace EbaPizzaria.Application.Services
 		{
 			Pizza pizza = _mapper.Map<Pizza>(pizzaDTO);
 			Pizza pizzaAlterada = await _pizzaRepository.Alterar(pizza);
+			_pizzaRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<PizzaDTO>(pizzaAlterada);
 		}
 
 		public async Task<PizzaDTO> Exlcuir(int id)
 		{
 			Pizza pizzaExcluida = await _pizzaRepository.Exlcuir(id);
+			_pizzaRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<PizzaDTO>(pizzaExcluida);
 		}
 
@@ -34,6 +36,7 @@ namespace EbaPizzaria.Application.Services
 		{
 			Pizza pizza = _mapper.Map<Pizza>(pizzaDTO);
 			Pizza pizzaIncluida = await _pizzaRepository.Incluir(pizza);
+			_pizzaRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<PizzaDTO>(pizzaIncluida);
 		}
 

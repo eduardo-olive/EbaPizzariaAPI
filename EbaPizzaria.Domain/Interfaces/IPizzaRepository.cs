@@ -9,5 +9,6 @@ namespace EbaPizzaria.Domain.Interfaces
 		Task<Pizza> Exlcuir(int id);
 		Task<IEnumerable<Pizza>> SelecionarTodos();
 		Task<Pizza> SelecionarById(int id);
+		Task<bool> SalvarTodasAlteracoes();
 	}
 }
