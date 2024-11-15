@@ -17,20 +17,20 @@ namespace EbaPizzaria.Infra.Data.Repositories
         public async Task<Pizza> Alterar(Pizza pizza)
 		{
 			_ebaPizzariaContext.Entry(pizza).State = EntityState.Modified;
-			_ebaPizzariaContext.Pizza.Update(pizza);
+			_ebaPizzariaContext.Pizzas.Update(pizza);
 			return pizza;
 		}
 
 		public async Task<Pizza> Exlcuir(int id)
 		{
-			Pizza pizzaExcluida = await _ebaPizzariaContext.Pizza.Where(x => x.Id == id).FirstOrDefaultAsync();
-			_ebaPizzariaContext.Pizza.Remove(pizzaExcluida);
+			Pizza pizzaExcluida = await _ebaPizzariaContext.Pizzas.Where(x => x.Id == id).FirstOrDefaultAsync();
+			_ebaPizzariaContext.Pizzas.Remove(pizzaExcluida);
 			return pizzaExcluida;
 		}
 
 		public async Task<Pizza> Incluir(Pizza pizza)
 		{
-			_ebaPizzariaContext.Pizza.Add(pizza);
+			_ebaPizzariaContext.Pizzas.Add(pizza);
 			return pizza;
 		}
 
@@ -41,12 +41,12 @@ namespace EbaPizzaria.Infra.Data.Repositories
 
 		public async Task<Pizza> SelecionarById(int id)
 		{
-			return await _ebaPizzariaContext.Pizza.Where(x => x.Id == id).FirstOrDefaultAsync();
+			return await _ebaPizzariaContext.Pizzas.Where(x => x.Id == id).FirstOrDefaultAsync();
 		}
 
 		public async Task<IEnumerable<Pizza>> SelecionarTodos()
 		{
-			return await _ebaPizzariaContext.Pizza.ToListAsync();
+			return await _ebaPizzariaContext.Pizzas.ToListAsync();
 		}
 	}
 }

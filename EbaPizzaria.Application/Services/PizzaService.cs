@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace EbaPizzaria.Application.Services
 {
-	internal class PizzaService : IPizzaService
+	public class PizzaService : IPizzaService
 	{
 		private readonly IPizzaRepository _pizzaRepository;
 		private readonly IMapper _mapper;

@@ -3,11 +3,6 @@ using EbaPizzaria.Application.DTOs;
 using EbaPizzaria.Application.Interfaces;
 using EbaPizzaria.Domain.Entities;
 using EbaPizzaria.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EbaPizzaria.Application.Services
 {
@@ -26,12 +21,14 @@ namespace EbaPizzaria.Application.Services
 		{
 			Cliente cliente = _mapper.Map<Cliente>(clienteDTO);
 			Cliente clienteAlterado = await _clienteRepository.Alterar(cliente);
+			await _clienteRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<ClienteDTO>(clienteAlterado);
 		}
 
 		public async Task<ClienteDTO> Excluir(int id)
 		{
 			Cliente clienteExcluido = await _clienteRepository.Excluir(id);
+			await _clienteRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<ClienteDTO>(clienteExcluido);
 		}
 
@@ -39,6 +36,8 @@ namespace EbaPizzaria.Application.Services
 		{
 			Cliente cliente = _mapper.Map<Cliente>(clienteDTO);
 			Cliente clienteIncluido = await _clienteRepository.Incluir(cliente);
+			await _clienteRepository.SalvarTodasAlteracoes();
+			
 			return _mapper.Map<ClienteDTO>(clienteIncluido);
 		}
 

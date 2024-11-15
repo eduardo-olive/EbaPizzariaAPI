@@ -1,12 +1,12 @@
-﻿using EbaPizzaria.Infra.Data.Context;
+﻿using EbaPizzaria.Application.Interfaces;
+using EbaPizzaria.Application.Mappings;
+using EbaPizzaria.Application.Services;
+using EbaPizzaria.Domain.Interfaces;
+using EbaPizzaria.Infra.Data.Context;
+using EbaPizzaria.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EbaPizzaria.Infra.Ioc
 {
@@ -17,9 +17,20 @@ namespace EbaPizzaria.Infra.Ioc
 		{
 			services.AddDbContext<ApplicationDbContext>(options =>
 			{
-				options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+				var connectionString = configuration.GetConnectionString("DefaultConnection");
+				options.UseSqlServer(connectionString,
 					b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
 			});
+
+			services.AddAutoMapper(typeof(EntitiesToDTOMappingProfile));
+
+			// Repositories
+			services.AddScoped<IClienteRepository, ClienteRepository>();
+			services.AddScoped<IPizzaRepository, PizzaRepository>();
+
+			// Services
+			services.AddScoped<IClienteService, ClienteService>();
+			services.AddScoped<IPizzaService, PizzaService>();
 
 			return services;
 		}

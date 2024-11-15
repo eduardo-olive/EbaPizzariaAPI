@@ -1,3 +1,10 @@
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.csproj.AssemblyReference.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfoInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfo.cs
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.csproj.CoreCompileInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.sourcelink.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\appsettings.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\EbaPizzaria.API.exe
@@ -130,14 +137,6 @@ C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\EbaPizzaria.Infra.Ioc.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\EbaPizzaria.Application.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\EbaPizzaria.Domain.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.API\bin\Debug\net8.0\EbaPizzaria.Infra.Data.pdb
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.csproj.AssemblyReference.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfoInputs.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfo.cs
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.csproj.CoreCompileInputs.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.sourcelink.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\staticwebassets\msbuild.EbaPizzaria.API.Microsoft.AspNetCore.StaticWebAssets.props

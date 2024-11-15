@@ -2,6 +2,7 @@
 using EbaPizzaria.Domain.Interfaces;
 using EbaPizzaria.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace EbaPizzaria.Infra.Data.Repositories
 {
@@ -17,20 +18,20 @@ namespace EbaPizzaria.Infra.Data.Repositories
         public async Task<Cliente> Alterar(Cliente cliente)
 		{
 			_ebaPizzariaContext.Entry(cliente).State = EntityState.Modified;
-			_ebaPizzariaContext.Cliente.Update(cliente);
+			_ebaPizzariaContext.Clientes.Update(cliente);
 			return cliente;
 		}
 
 		public async Task<Cliente> Excluir(int id)
 		{
-			Cliente cliente = await _ebaPizzariaContext.Cliente.Where(x => x.Id == id).FirstOrDefaultAsync();
-			_ebaPizzariaContext.Cliente.Remove(cliente);
+			Cliente cliente = await _ebaPizzariaContext.Clientes.Where(x => x.Id == id).FirstOrDefaultAsync();
+			_ebaPizzariaContext.Clientes.Remove(cliente);
 			return cliente;
 		}
 
 		public async Task<Cliente> Incluir(Cliente cliente)
 		{
-			_ebaPizzariaContext.Cliente.Add(cliente);
+			_ebaPizzariaContext.Clientes.Add(cliente);
 			return cliente;
 		}
 
@@ -41,12 +42,13 @@ namespace EbaPizzaria.Infra.Data.Repositories
 
 		public async Task<Cliente> SelecionaById(int id)
 		{
-			return await _ebaPizzariaContext.Cliente.Where(x => x.Id == id).FirstOrDefaultAsync();
+			return await _ebaPizzariaContext.Clientes.Where(x => x.Id == id).FirstOrDefaultAsync();
 		}
 
 		public async Task<IEnumerable<Cliente>> SelecionarTodos()
 		{
-			return await _ebaPizzariaContext.Cliente.ToListAsync();
+			IEnumerable<Cliente> clientes = await _ebaPizzariaContext.Clientes.ToListAsync();
+			return clientes;
 		}
 	}
 }
