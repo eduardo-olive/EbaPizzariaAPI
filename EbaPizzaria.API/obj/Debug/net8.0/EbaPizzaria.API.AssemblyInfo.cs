@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EbaPizzaria.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a86066a99a3665e1dcf5ce7099b64965fdd39d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dd850813e73167d96338ef15c9522100a62c8bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("EbaPizzaria.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EbaPizzaria.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
