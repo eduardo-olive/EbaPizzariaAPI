@@ -10,7 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System.Text.Unicode;
 
 namespace EbaPizzaria.Infra.Ioc
 {
@@ -53,10 +52,12 @@ namespace EbaPizzaria.Infra.Ioc
 			// Repositories
 			services.AddScoped<IClienteRepository, ClienteRepository>();
 			services.AddScoped<IPizzaRepository, PizzaRepository>();
+			services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 			// Services
 			services.AddScoped<IClienteService, ClienteService>();
 			services.AddScoped<IPizzaService, PizzaService>();
+			services.AddScoped<IUsuarioService, UsuarioService>();
 
 			return services;
 		}

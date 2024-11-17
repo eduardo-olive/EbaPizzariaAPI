@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EbaPizzaria.Infra.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0845883c719fea39e9f779f319a1e028ef5c765e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8496b04edd627d2b3540e4b5bec3c823abd2cfaf")]
 [assembly: System.Reflection.AssemblyProductAttribute("EbaPizzaria.Infra.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EbaPizzaria.Infra.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
