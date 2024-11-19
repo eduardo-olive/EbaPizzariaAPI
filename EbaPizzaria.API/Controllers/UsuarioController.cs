@@ -1,5 +1,9 @@
+using AutoMapper;
+using EbaPizzaria.API.Models;
 using EbaPizzaria.Application.DTOs;
 using EbaPizzaria.Application.Interfaces;
+using EbaPizzaria.Domain.Account;
+using EbaPizzaria.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EbaPizzaria.API.Controllers;
@@ -9,60 +13,61 @@ namespace EbaPizzaria.API.Controllers;
 public class UsuarioController : Controller
 {
     private readonly IUsuarioService _usuarioService;
-
-    public UsuarioController(IUsuarioService usuarioService)
+    private readonly IAuthenticate _authenticate;
+    public UsuarioController(IUsuarioService usuarioService, IAuthenticate authenticate)
     {
         _usuarioService = usuarioService;
+        _authenticate = authenticate;
     }
     
-    [HttpPost]
-    public async Task<ActionResult> Incluir(UsuarioDTO usuarioDto)
+    [HttpPost("registrar")]
+    public async Task<ActionResult<UsuarioToken>> Incluir(UsuarioDTO usuarioDto)
     {
+        if (usuarioDto == null)
+        {
+            return BadRequest("Dados inválidos.");
+        }
+        
+        var emailExiste = await _authenticate.UserExist(usuarioDto.Email);
+        if (emailExiste)
+        {
+            return BadRequest("Esse e-mail possui um cadastro.");
+        }
+        
         UsuarioDTO usuarioInseridoDTO = await _usuarioService.Incluir(usuarioDto);
         if (usuarioInseridoDTO == null)
         {
-            return BadRequest("Falaha ao inserir o usuario");
+            return BadRequest("Falha ao inserir o usuario");
         }
-        return Ok(usuarioDto);
+        var token = _authenticate.GenerateToken(usuarioInseridoDTO.Id, usuarioInseridoDTO.Email);
+        return new UsuarioToken
+        {
+            Token = token
+        };
     }
 
-    [HttpPut]
-    public async Task<ActionResult> Alterar(UsuarioDTO usuarioDto)
+    [HttpPost("login")]
+    public async Task<ActionResult<UsuarioToken>> Selecionar(LoginModel loginModel)
     {
-        UsuarioDTO usuarioAlteradoDTO = await _usuarioService.Alterar(usuarioDto);
-        if (usuarioAlteradoDTO == null)
+        var usuarioExiste = await _authenticate.UserExist(loginModel.email);
+        if (!usuarioExiste)
         {
-            return BadRequest("Falha ao alterar o usuario");
+            return Unauthorized("Usuário não existe.");
         }
-        return Ok(usuarioDto);
-    }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> Excluir(int id)
-    {
-        UsuarioDTO usuarioExlcuidoDto = await _usuarioService.Excluir(id);
-        if (usuarioExlcuidoDto == null)
+        var result = await _authenticate.AuthenticateAsync(loginModel.email, loginModel.senha);
+        if (!result)
         {
-            return BadRequest("Falha ao excluir o usuario");
+            return Unauthorized("E-mail ou senha inválidos.");
         }
-        return Ok(usuarioExlcuidoDto);
-    }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<UsuarioDTO>> SelecionarPorId(int id)
-    {
-        UsuarioDTO usuarioDTOSelecionado = await _usuarioService.SelecionaById(id);
-        if (usuarioDTOSelecionado == null)
+        Usuario usuario = await _authenticate.SelecionaUsuarioEmail(loginModel.email);
+
+        var token = _authenticate.GenerateToken(usuario.Id, usuario.Email);
+
+        return new UsuarioToken
         {
-            return NotFound("Usuário não localiado.");
-        }
-        return Ok(usuarioDTOSelecionado);
-    }
-    
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<UsuarioDTO>>> SelecionarTodos()
-    {
-        IEnumerable<UsuarioDTO> usuariosDTOSelecionados = await _usuarioService.SelecionarTodos();
-        return Ok(usuariosDTOSelecionados);
+            Token = token
+        };
     }
 }

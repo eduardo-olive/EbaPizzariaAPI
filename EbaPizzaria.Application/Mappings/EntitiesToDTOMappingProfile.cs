@@ -10,6 +10,7 @@ namespace EbaPizzaria.Application.Mappings
         {
             CreateMap<Cliente, ClienteDTO>().ReverseMap();
             CreateMap<Pizza, PizzaDTO>().ReverseMap();
+            CreateMap<Usuario, UsuarioDTO>().ReverseMap();
         }
     }
 }

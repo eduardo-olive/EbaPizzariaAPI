@@ -1,11 +1,13 @@
 ﻿using EbaPizzaria.Application.DTOs;
 using EbaPizzaria.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EbaPizzaria.API.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
+	[Authorize]
 	public class ClienteController : Controller
 	{
 		private readonly IClienteService _clienteService;

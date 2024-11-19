@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using EbaPizzaria.Domain.Account;
+using EbaPizzaria.Infra.Data.Identity;
 
 namespace EbaPizzaria.Infra.Ioc
 {
@@ -58,6 +60,7 @@ namespace EbaPizzaria.Infra.Ioc
 			services.AddScoped<IClienteService, ClienteService>();
 			services.AddScoped<IPizzaService, PizzaService>();
 			services.AddScoped<IUsuarioService, UsuarioService>();
+			services.AddScoped<IAuthenticate, AuthenticateService>();
 
 			return services;
 		}

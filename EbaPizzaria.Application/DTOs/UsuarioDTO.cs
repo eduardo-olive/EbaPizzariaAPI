@@ -6,8 +6,8 @@ namespace EbaPizzaria.Application.DTOs
 {
 	public class UsuarioDTO
 	{
-		//[Key]
-		//public int Id { get; set; }
+		[Key]
+		public int Id { get; set; }
 
 		[Required(ErrorMessage = "O Campo nome não pode ser vazio.")]
 		[StringLength(255)]

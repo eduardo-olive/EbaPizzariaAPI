@@ -5,6 +5,8 @@ using EbaPizzaria.Application.DTOs;
 using EbaPizzaria.Application.Interfaces;
 using EbaPizzaria.Domain.Entities;
 using EbaPizzaria.Domain.Interfaces;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace EbaPizzaria.Application.Services
 {
@@ -37,6 +39,15 @@ namespace EbaPizzaria.Application.Services
 		public async Task<UsuarioDTO> Incluir(UsuarioDTO usuarioDTO)
 		{
 			Usuario usuario = _mapper.Map<Usuario>(usuarioDTO);
+			if (usuarioDTO.senha != null)
+			{
+				using var hmac = new HMACSHA256();
+				byte[] passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(usuarioDTO.senha));
+				byte[] passwordSalt = hmac.Key;
+
+				usuario.AlterarSenha(passwordHash, passwordSalt);
+			}
+
 			Usuario usuarioIncluida = await _usuarioRepository.Incluir(usuario);
 			_usuarioRepository.SalvarTodasAlteracoes();
 			return _mapper.Map<UsuarioDTO>(usuarioIncluida);
