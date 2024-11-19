@@ -1,6 +1,8 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace EbaPizzaria.Application.DTOs
 {
@@ -22,6 +24,9 @@ namespace EbaPizzaria.Application.DTOs
 		[Required(ErrorMessage = "O Campo senha não pode ser vazio.")]
 		[StringLength(255)]
 		[Unicode(false)]
+		[NotMapped]
 		public string senha { get; set; }
+		[JsonIgnore]
+		public bool IsAdmin {  get; set; }
 	}
 }

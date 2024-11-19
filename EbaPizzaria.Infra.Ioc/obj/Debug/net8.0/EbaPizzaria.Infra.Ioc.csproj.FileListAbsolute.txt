@@ -1,9 +1,3 @@
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.csproj.AssemblyReference.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.GeneratedMSBuildEditorConfig.editorconfig
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.AssemblyInfoInputs.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.AssemblyInfo.cs
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.csproj.CoreCompileInputs.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.sourcelink.json
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Infra.Ioc.deps.json
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Infra.Ioc.runtimeconfig.json
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Infra.Ioc.dll
@@ -14,6 +8,12 @@ C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Infra.Data
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Application.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Domain.pdb
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\bin\Debug\net8.0\EbaPizzaria.Infra.Data.pdb
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.csproj.AssemblyReference.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.AssemblyInfoInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.AssemblyInfo.cs
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.csproj.CoreCompileInputs.cache
+C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.sourcelink.json
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizza.F3816A04.Up2Date
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\EbaPizzaria.Infra.Ioc.dll
 C:\Dev\EbaPizzaria\EbaPizzaria.Infra.Ioc\obj\Debug\net8.0\refint\EbaPizzaria.Infra.Ioc.dll

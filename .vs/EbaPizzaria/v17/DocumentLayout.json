@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Dev\\EbaPizzaria\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B5573BA6-A9B5-47E5-8BFF-9305700DD5EE}|EbaPizzaria.Application\\EbaPizzaria.Application.csproj|c:\\dev\\ebapizzaria\\ebapizzaria.application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5573BA6-A9B5-47E5-8BFF-9305700DD5EE}|EbaPizzaria.Application\\EbaPizzaria.Application.csproj|solutionrelative:ebapizzaria.application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8924B93A-D9C6-4757-985B-672DB9BCD08E}|EbaPizzaria.Infra.Data\\EbaPizzaria.Infra.Data.csproj|c:\\dev\\ebapizzaria\\ebapizzaria.infra.data\\identity\\authenticateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8924B93A-D9C6-4757-985B-672DB9BCD08E}|EbaPizzaria.Infra.Data\\EbaPizzaria.Infra.Data.csproj|solutionrelative:ebapizzaria.infra.data\\identity\\authenticateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45B45A1E-B53D-4BF9-9A23-879C4D114753}|EbaPizzaria.API\\EbaPizzaria.API.csproj|c:\\dev\\ebapizzaria\\ebapizzaria.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45B45A1E-B53D-4BF9-9A23-879C4D114753}|EbaPizzaria.API\\EbaPizzaria.API.csproj|solutionrelative:ebapizzaria.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,45 +34,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.Application\\Services\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "EbaPizzaria.Application\\Services\\UsuarioService.cs",
-              "ToolTip": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.Application\\Services\\UsuarioService.cs",
-              "RelativeToolTip": "EbaPizzaria.Application\\Services\\UsuarioService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwCkAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T19:51:56.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthenticateService.cs",
-              "DocumentMoniker": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.Infra.Data\\Identity\\AuthenticateService.cs",
-              "RelativeDocumentMoniker": "EbaPizzaria.Infra.Data\\Identity\\AuthenticateService.cs",
-              "ToolTip": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.Infra.Data\\Identity\\AuthenticateService.cs",
-              "RelativeToolTip": "EbaPizzaria.Infra.Data\\Identity\\AuthenticateService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:39:37.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "EbaPizzaria.API\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Dev\\EbaPizzaria\\EbaPizzaria.API\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "EbaPizzaria.API\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAWwA8AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:39:47.905Z",
-              "EditorCaption": ""
             }
           ]
         }

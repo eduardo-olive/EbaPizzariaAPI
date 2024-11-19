@@ -12,6 +12,7 @@ namespace EbaPizzaria.Domain.Entities
 		public int Id { get; private set; }
 		public string Nome { get; private set; }
 		public string Email { get; private set; }
+		public bool IsAdmin { get; private set; }
 		public byte[] SenhaHash { get; private set; }
 		public byte[] SenhaSalt { get; private set; }
 
@@ -25,6 +26,11 @@ namespace EbaPizzaria.Domain.Entities
 		public Usuario(string nome, string email)
 		{
 			validateDomain(nome, email);
+		}
+
+		public void SetAdmin(bool isAdmin)
+		{
+			IsAdmin = isAdmin;
 		}
 
 		public void AlterarSenha(byte[] senhaHash, byte[] senhaSalt)
@@ -42,6 +48,7 @@ namespace EbaPizzaria.Domain.Entities
 
 			Nome = nome;
 			Email = email;
+			IsAdmin = false;
 		}
 	}
 }

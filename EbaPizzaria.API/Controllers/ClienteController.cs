@@ -1,5 +1,6 @@
 ﻿using EbaPizzaria.Application.DTOs;
 using EbaPizzaria.Application.Interfaces;
+using EbaPizzaria.Infra.Ioc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,13 @@ namespace EbaPizzaria.API.Controllers
 	public class ClienteController : Controller
 	{
 		private readonly IClienteService _clienteService;
+		private readonly IUsuarioService _usuarioService;
 
-        public ClienteController(IClienteService clienteService)
-        {
-            _clienteService = clienteService;
-        }
+		public ClienteController(IUsuarioService suarioService, IClienteService clienteService)
+		{
+			_usuarioService = suarioService;
+			_clienteService = clienteService;
+		}
 
 		[HttpPost]
         public async Task<ActionResult> Incluir(ClienteDTO clienteDTO)
@@ -44,6 +47,15 @@ namespace EbaPizzaria.API.Controllers
 		[HttpDelete("{id}")]
 		public async Task<ActionResult> Excluir(int id)
 		{
+			var userId = User.GetId;
+
+			UsuarioDTO usuarioDTO = await _usuarioService.SelecionaById(userId);
+
+			if (!usuarioDTO.IsAdmin)
+			{
+				return Unauthorized("Usuário sem permissão para executar essa tarefa.");
+			}
+			
 			ClienteDTO clienteDTOExcluido = await _clienteService.Excluir(id);
 			if (clienteDTOExcluido == null)
 			{
