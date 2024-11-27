@@ -55,12 +55,14 @@ namespace EbaPizzaria.Infra.Ioc
 			services.AddScoped<IClienteRepository, ClienteRepository>();
 			services.AddScoped<IPizzaRepository, PizzaRepository>();
 			services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+			services.AddScoped<IPedidoRepository, PedidoRepository>();
 
 			// Services
 			services.AddScoped<IClienteService, ClienteService>();
 			services.AddScoped<IPizzaService, PizzaService>();
 			services.AddScoped<IUsuarioService, UsuarioService>();
 			services.AddScoped<IAuthenticate, AuthenticateService>();
+			services.AddScoped<IPedidoService, PedidoService>();
 
 			return services;
 		}
