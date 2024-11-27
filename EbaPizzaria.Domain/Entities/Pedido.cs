@@ -13,31 +13,31 @@ namespace EbaPizzaria.Domain.Entities
 		public int IdCliente { get; private set; }
 		public DateTime DataPedido { get; private set; }
 		public decimal ValorPedido { get; private set; }
-		public Cliente Cliente { get; private set; }
+		public virtual Cliente Cliente { get; private set; }
 
-		public Pedido(int id, int idCliente, DateTime dataPedido, decimal valorPedido)
+		public Pedido(int id, int idCliente, decimal valorPedido)
 		{
 			DomainExceptionValidation.When(id < 0, "O Id do pedido deve ser maior que Zero.");
 			Id = id;
-			ValidatePedidoDomain(idCliente, dataPedido, valorPedido);
+			ValidatePedidoDomain(idCliente, valorPedido);
 		}
 
-		public Pedido(int idCliente, DateTime dataPedido, decimal valorPedido)
+		public Pedido(int idCliente, decimal valorPedido)
 		{
-			ValidatePedidoDomain(idCliente, dataPedido, valorPedido);
+			ValidatePedidoDomain(idCliente, valorPedido);
 		}
 
-		public void Update(int idCliente, DateTime dataPedido, decimal valorPedido)
+		public void Update(int idCliente, decimal valorPedido)
 		{
-			ValidatePedidoDomain(idCliente, dataPedido, valorPedido);
+			ValidatePedidoDomain(idCliente, valorPedido);
 		}
 
-		public void ValidatePedidoDomain(int idCliente, DateTime dataPedido, decimal valorPedido)
+		public void ValidatePedidoDomain(int idCliente, decimal valorPedido)
 		{
 			DomainExceptionValidation.When(idCliente < 1, "O Id do cliente não pode ser menor 1.");
 			
 			IdCliente = idCliente;
-			DataPedido = dataPedido;
+			DataPedido = DateTime.UtcNow;
 			ValorPedido = valorPedido;
 		}
 	}

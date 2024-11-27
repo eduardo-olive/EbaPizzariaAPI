@@ -47,7 +47,8 @@ namespace EbaPizzaria.API.Controllers
 		[HttpDelete("{id}")]
 		public async Task<ActionResult> Excluir(int id)
 		{
-			var userId = User.GetId;
+			//var userId = User.GetId;
+			var userId = 16;
 
 			UsuarioDTO usuarioDTO = await _usuarioService.SelecionaById(userId);
 
