@@ -1,9 +1,4 @@
 ﻿using EbaPizzaria.Domain.Validations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EbaPizzaria.Domain.Entities
 {
@@ -14,8 +9,8 @@ namespace EbaPizzaria.Domain.Entities
 		public decimal ValorUnitario { get; private set; }
 		public int Quantidade {  get; private set; }
 		public decimal ValorTotal { get; private set; }
-		public ICollection<Pedido> Pedidos {  get; set; }
-		public ICollection<Pizza> Pizzas { get; set; }
+		public virtual ICollection<Pedido> Pedidos {  get; set; }
+		public virtual ICollection<Pizza> Pizzas { get; set; }
 
 		public ItensPedido(int idPedido, int idPizza, decimal valorUnitario, int quantidade, decimal valorTotal)
 		{

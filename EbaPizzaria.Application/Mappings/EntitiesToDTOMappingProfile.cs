@@ -13,9 +13,10 @@ namespace EbaPizzaria.Application.Mappings
             CreateMap<Usuario, UsuarioDTO>().ReverseMap();
             CreateMap<PedidoDTO, Pedido>().ReverseMap()
                 .ForMember(dest => dest.ClienteDTO, opt => opt.MapFrom(x => x.Cliente));
-			// .ForMember(dest => dest.ItensPedidoDTO, opt => opt.MapFrom(x => x.ItensPedido));
+			    //.ForMember(dest => dest.ItensPedidoDTO, opt => opt.MapFrom(x => x.ItensPedido));
 			CreateMap<Pedido, PedidoPostDTO>().ReverseMap();
             CreateMap<Pedido, PedidoPutDTO>().ReverseMap();
+            CreateMap<ItensPedido, ItemPedidoDTO>().ReverseMap();
         }
     }
 }

@@ -14,6 +14,8 @@ namespace EbaPizzaria.Infra.Data.Context
 		
 		public DbSet<Pedido> Pedido { get; set; }
 
+		public DbSet<ItensPedido> ItensPedido { get; set; }
+
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
 			base.OnModelCreating(builder);

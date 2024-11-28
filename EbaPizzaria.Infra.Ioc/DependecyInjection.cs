@@ -56,6 +56,7 @@ namespace EbaPizzaria.Infra.Ioc
 			services.AddScoped<IPizzaRepository, PizzaRepository>();
 			services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 			services.AddScoped<IPedidoRepository, PedidoRepository>();
+			services.AddScoped<IItemPedidoRepository, ItemPedidoRepository>();
 
 			// Services
 			services.AddScoped<IClienteService, ClienteService>();
@@ -63,6 +64,7 @@ namespace EbaPizzaria.Infra.Ioc
 			services.AddScoped<IUsuarioService, UsuarioService>();
 			services.AddScoped<IAuthenticate, AuthenticateService>();
 			services.AddScoped<IPedidoService, PedidoService>();
+			services.AddScoped<IItemPedidoService, ItemPedidoService>();
 
 			return services;
 		}

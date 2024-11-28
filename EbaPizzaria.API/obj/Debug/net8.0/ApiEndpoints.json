@@ -74,6 +74,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EbaPizzaria.API.Controllers.ItemPedidoController",
+    "Method": "Incluir",
+    "RelativePath": "api/ItemPedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemPedidoDTO",
+        "Type": "EbaPizzaria.Application.DTOs.ItemPedidoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EbaPizzaria.API.Controllers.ItemPedidoController",
+    "Method": "Exluir",
+    "RelativePath": "api/ItemPedido/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EbaPizzaria.API.Controllers.PedidoController",
     "Method": "Listar",
     "RelativePath": "api/Pedido",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EbaPizzaria.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ef0a802fdaaf5181cb20090c5509972531e8a2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70ff7f187c155769170792d31322108dde710b4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EbaPizzaria.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EbaPizzaria.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
