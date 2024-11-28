@@ -31,14 +31,24 @@ public class PedidoController : Controller
         return Ok(pedidoSelecionado);
     }
 
-
     [HttpPost]
     public async Task<ActionResult> Incluir(PedidoPostDTO pedidoPostDTO)
     {
+        pedidoPostDTO.DataPedido = DateTime.Now;
         var pedidoDTOIncluido = await _pedidoService.Incluir(pedidoPostDTO);
         if (pedidoDTOIncluido == null)
             return BadRequest("Falha ao incluir o pedido");
         
         return Ok(pedidoDTOIncluido);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult> Alterar(PedidoPutDTO pedidoPutDTO)
+    {
+        var pedidoDTOAlterado = await _pedidoService.Alterar(pedidoPutDTO);
+        if (pedidoDTOAlterado == null)
+			return BadRequest("Falha ao alterar o pedido.");
+
+		return Ok(pedidoDTOAlterado);
     }
 }

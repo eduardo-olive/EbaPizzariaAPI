@@ -36,7 +36,7 @@ public class PedidoRepository : IPedidoRepository
 
     public async Task<IEnumerable<Pedido>> SelecionarTodos()
     {
-        IEnumerable<Pedido> pedidosSelecioandos = await _ebaPizzariaContext.Pedido.ToListAsync();
+        IEnumerable<Pedido> pedidosSelecioandos = await _ebaPizzariaContext.Pedido.Include(x => x.Cliente).ToListAsync();
         return pedidosSelecioandos;
     }
 

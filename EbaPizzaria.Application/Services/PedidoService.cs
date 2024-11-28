@@ -25,9 +25,9 @@ public class PedidoService : IPedidoService
         return _mapper.Map<PedidoDTO>(pedido);
     }
 
-    public async Task<PedidoDTO> Alterar(PedidoDTO pedidoDTO)
+    public async Task<PedidoDTO> Alterar(PedidoPutDTO pedidoPutDTO)
     {
-        Pedido pedido = _mapper.Map<Pedido>(pedidoDTO);
+        Pedido pedido = _mapper.Map<Pedido>(pedidoPutDTO);
         Pedido pedidoAlterado = await _pedidoRepository.Alterar(pedido);
         await _pedidoRepository.SalvarTodasAlteracoes();
         return _mapper.Map<PedidoDTO>(pedido);

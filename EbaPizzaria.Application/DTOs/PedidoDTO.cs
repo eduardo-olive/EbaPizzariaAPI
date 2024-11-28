@@ -12,7 +12,6 @@ public class PedidoDTO
     public int IdCliente { get; set; }
     public DateTime DataPedido { get; set; }
     public decimal ValorPedido { get; set; }
-	[JsonIgnore]
-	public virtual ClienteDTO ClienteDTO { get; set; }
+	public ClienteDTO ClienteDTO { get; set; }
 	
 }

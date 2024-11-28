@@ -101,6 +101,22 @@
   },
   {
     "ContainingType": "EbaPizzaria.API.Controllers.PedidoController",
+    "Method": "Alterar",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedidoPutDTO",
+        "Type": "EbaPizzaria.Application.DTOs.PedidoPutDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EbaPizzaria.API.Controllers.PedidoController",
     "Method": "ListarPorId",
     "RelativePath": "api/Pedido/{id}",
     "HttpMethod": "GET",
