@@ -1,5 +1,6 @@
 ﻿using EbaPizzaria.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+
 namespace EbaPizzaria.Infra.Data.Context
 {
 	public class ApplicationDbContext : DbContext

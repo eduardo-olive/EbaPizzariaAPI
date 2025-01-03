@@ -29,7 +29,7 @@ namespace EbaPizzaria.API.Controllers
 				return BadRequest("Falha ao incluir o cliente.");
 			}
 			
-			return Ok(clienteDTOIncluido);
+			return Created();
 		}
 
 		[HttpPut]
@@ -41,7 +41,7 @@ namespace EbaPizzaria.API.Controllers
 				return BadRequest("Falha ao alterar o cliente.");
 			}
 			
-			return Ok(clienteDTOAlterado);
+			return NoContent();
 		}
 
 		[HttpDelete("{id}")]
@@ -63,7 +63,7 @@ namespace EbaPizzaria.API.Controllers
 				return BadRequest("Falha ao excluir o cliente.");
 			}
 
-			return Ok("Cliente excluido com sucesso.");
+			return NoContent();
 		}
 
 		[HttpGet]

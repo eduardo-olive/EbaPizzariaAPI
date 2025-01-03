@@ -136,7 +136,6 @@ C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.GeneratedMSB
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfoInputs.cache
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.AssemblyInfo.cs
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.csproj.CoreCompileInputs.cache
-C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\EbaPizzaria.API.sourcelink.json
 C:\Dev\EbaPizzaria\EbaPizzaria.API\obj\Debug\net8.0\staticwebassets.build.json

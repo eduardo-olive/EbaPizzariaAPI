@@ -76,17 +76,17 @@ namespace EbaPizzaria.Infra.Data.Migrations
                     b.Property<int>("IdIngrediente")
                         .HasColumnType("int");
 
-                    b.Property<int>("IngredientesId")
+                    b.Property<int?>("IngredienteId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PizzasId")
+                    b.Property<int?>("PizzaId")
                         .HasColumnType("int");
 
                     b.HasKey("IdPizza", "IdIngrediente");
 
-                    b.HasIndex("IngredientesId");
+                    b.HasIndex("IngredienteId");
 
-                    b.HasIndex("PizzasId");
+                    b.HasIndex("PizzaId");
 
                     b.ToTable("IngredientesPizza");
                 });
@@ -122,7 +122,7 @@ namespace EbaPizzaria.Infra.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DataPedido")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<int>("IdCliente")
                         .HasColumnType("int");
@@ -215,21 +215,13 @@ namespace EbaPizzaria.Infra.Data.Migrations
 
             modelBuilder.Entity("EbaPizzaria.Domain.Entities.IngredientesPizza", b =>
                 {
-                    b.HasOne("EbaPizzaria.Domain.Entities.Ingrediente", "Ingredientes")
+                    b.HasOne("EbaPizzaria.Domain.Entities.Ingrediente", null)
                         .WithMany("Ingredirntes")
-                        .HasForeignKey("IngredientesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IngredienteId");
 
-                    b.HasOne("EbaPizzaria.Domain.Entities.Pizza", "Pizzas")
+                    b.HasOne("EbaPizzaria.Domain.Entities.Pizza", null)
                         .WithMany("IngredientesPizza")
-                        .HasForeignKey("PizzasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Ingredientes");
-
-                    b.Navigation("Pizzas");
+                        .HasForeignKey("PizzaId");
                 });
 
             modelBuilder.Entity("EbaPizzaria.Domain.Entities.Pedido", b =>

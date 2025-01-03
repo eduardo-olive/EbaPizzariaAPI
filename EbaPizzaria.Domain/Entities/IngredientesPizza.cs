@@ -6,8 +6,8 @@ namespace EbaPizzaria.Domain.Entities
 	{
 		public int IdPizza { get; private set; }
 		public int IdIngrediente {  get; private set; }
-		public Pizza Pizzas { get; set; }
-		public Ingrediente Ingredientes { get; set; }
+		//public Pizza Pizzas { get; set; }
+		//public Ingrediente Ingredientes { get; set; }
 		
 
 		public IngredientesPizza(int idPizza, int idIngrediente)

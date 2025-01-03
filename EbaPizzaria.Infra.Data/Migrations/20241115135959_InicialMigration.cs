@@ -62,9 +62,9 @@ namespace EbaPizzaria.Infra.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdCliente = table.Column<int>(type: "int", nullable: false),
                     DataPedido = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ValorPedido = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ItensPedidoIdPedido = table.Column<int>(type: "int", nullable: true),
-                    ItensPedidoIdPizza = table.Column<int>(type: "int", nullable: true)
+                    ValorPedido = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    //ItensPedidoIdPedido = table.Column<int>(type: "int", nullable: true),
+                    //ItensPedidoIdPizza = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,11 +74,11 @@ namespace EbaPizzaria.Infra.Data.Migrations
                         column: x => x.IdCliente,
                         principalTable: "Clientes",
                         principalColumn: "Id");
-                    table.ForeignKey(
+                    /*table.ForeignKey(
                         name: "FK_Pedido_ItensPedido_ItensPedidoIdPedido_ItensPedidoIdPizza",
                         columns: x => new { x.ItensPedidoIdPedido, x.ItensPedidoIdPizza },
                         principalTable: "ItensPedido",
-                        principalColumns: new[] { "IdPedido", "IdPizza" });
+                        principalColumns: new[] { "IdPedido", "IdPizza" });*/
                 });
 
             migrationBuilder.CreateTable(
@@ -89,18 +89,18 @@ namespace EbaPizzaria.Infra.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ItensPedidoIdPedido = table.Column<int>(type: "int", nullable: true),
-                    ItensPedidoIdPizza = table.Column<int>(type: "int", nullable: true)
+                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    /*ItensPedidoIdPedido = table.Column<int>(type: "int", nullable: true),
+                    ItensPedidoIdPizza = table.Column<int>(type: "int", nullable: true)*/
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pizzas", x => x.Id);
-                    table.ForeignKey(
+                    /*table.ForeignKey(
                         name: "FK_Pizzas_ItensPedido_ItensPedidoIdPedido_ItensPedidoIdPizza",
                         columns: x => new { x.ItensPedidoIdPedido, x.ItensPedidoIdPizza },
                         principalTable: "ItensPedido",
-                        principalColumns: new[] { "IdPedido", "IdPizza" });
+                        principalColumns: new[] { "IdPedido", "IdPizza" });*/
                 });
 
             migrationBuilder.CreateTable(
@@ -108,14 +108,14 @@ namespace EbaPizzaria.Infra.Data.Migrations
                 columns: table => new
                 {
                     IdPizza = table.Column<int>(type: "int", nullable: false),
-                    IdIngrediente = table.Column<int>(type: "int", nullable: false),
-                    PizzasId = table.Column<int>(type: "int", nullable: false),
-                    IngredientesId = table.Column<int>(type: "int", nullable: false)
+                    IdIngrediente = table.Column<int>(type: "int", nullable: false)
+                    /*PizzasId = table.Column<int>(type: "int", nullable: false),
+                    IngredientesId = table.Column<int>(type: "int", nullable: false)*/
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IngredientesPizza", x => new { x.IdPizza, x.IdIngrediente });
-                    table.ForeignKey(
+                    /*table.ForeignKey(
                         name: "FK_IngredientesPizza_Ingrediente_IngredientesId",
                         column: x => x.IngredientesId,
                         principalTable: "Ingrediente",
@@ -126,18 +126,18 @@ namespace EbaPizzaria.Infra.Data.Migrations
                         column: x => x.PizzasId,
                         principalTable: "Pizzas",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade);*/
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_IngredientesPizza_IngredientesId",
                 table: "IngredientesPizza",
-                column: "IngredientesId");
+                column: "IdIngrediente");
 
             migrationBuilder.CreateIndex(
                 name: "IX_IngredientesPizza_PizzasId",
                 table: "IngredientesPizza",
-                column: "PizzasId");
+                column: "IdPizza");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedido_IdCliente",
@@ -147,12 +147,12 @@ namespace EbaPizzaria.Infra.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Pedido_ItensPedidoIdPedido_ItensPedidoIdPizza",
                 table: "Pedido",
-                columns: new[] { "ItensPedidoIdPedido", "ItensPedidoIdPizza" });
+                column: "IdPedido");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pizzas_ItensPedidoIdPedido_ItensPedidoIdPizza",
                 table: "Pizzas",
-                columns: new[] { "ItensPedidoIdPedido", "ItensPedidoIdPizza" });
+                column: "IdPizza");
         }
 
         /// <inheritdoc />
