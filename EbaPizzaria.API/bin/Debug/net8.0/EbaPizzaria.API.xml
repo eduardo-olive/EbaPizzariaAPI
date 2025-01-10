@@ -4,5 +4,98 @@
         <name>EbaPizzaria.API</name>
     </assembly>
     <members>
+        <member name="M:EbaPizzaria.API.Controllers.ClienteController.Incluir(EbaPizzaria.Application.DTOs.ClienteDTO)">
+            <summary>
+            Inclui um cliente.
+            </summary>
+            <remarks>
+            {
+              "id": 0,
+              "nome": "string",
+              "endereco": "string",
+              "contato": "string"
+            }
+            </remarks>
+            <param name="clienteDTO">Dados do cliente</param>
+            <returns>Objeto recém-criando</returns>
+            <response code="400">Falha ao incluir cliente</response>
+            <response code="201">Sucesso</response>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.ClienteController.Alterar(System.Int32,EbaPizzaria.Application.DTOs.ClienteDTO)">
+            <summary>
+            Altera cliente.
+            </summary>
+            <remarks>
+            {
+              "id": 0,
+              "nome": "string",
+              "endereco": "string",
+              "contato": "string"
+            } 
+            </remarks>
+            <param name="id">Identificador do cliente</param>
+            <param name="clienteDTO">Dados do cliente</param>
+            <returns>Nada.</returns>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.ClienteController.Excluir(System.Int32)">
+            <summary>
+            Deleta um cliente.
+            </summary>
+            <param name="id">Identificador do cliente.</param>
+            <returns></returns>
+            <response code="401">Não autorizado</response>
+            <response code="400">Falha na exclusão do cliente.</response>
+            <response code="201">Sucesso</response>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.ClienteController.SelecionarTodos">
+            <summary>
+            Obter todos os clientes
+            </summary>
+            <remarks>
+            array de clientes JSON
+            </remarks>
+            <returns>Coleção de cliente.</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.ClienteController.SelecionarPorId(System.Int32)">
+            <summary>
+            Obter um cliente através do identificador.
+            </summary>
+            <remarks>
+            retorna um cliente.
+            </remarks>
+            <param name="id">Identificador do cliente</param>
+            <returns>Retorna um cliente</returns>
+            <response code="200">Sucesso</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.UsuarioController.Incluir(EbaPizzaria.Application.DTOs.UsuarioDTO)">
+            <summary>
+            Registra um usuário
+            </summary>
+            <remarks>
+            {
+             "id": 0,
+             "nome": "string",
+             "email": "string",
+             "senha": "string"
+            }
+            </remarks>
+            <param name="usuarioDto"></param>
+            <returns>Token de acesso</returns>
+            <response code="400">Dados inválidos</response>
+            <response code="422">E-mail informado já cadastrado.</response>
+            <response code="201">Sucesso</response>
+        </member>
+        <member name="M:EbaPizzaria.API.Controllers.UsuarioController.Selecionar(EbaPizzaria.API.Models.LoginModel)">
+            <summary>
+            Efetua login na API.
+            </summary>
+            <param name="loginModel"></param>
+            <returns>Nada.</returns>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="401">E-mail ou senha inválidos.</response>
+            <response code="200">Sucesso</response>
+        </member>
     </members>
 </doc>

@@ -18,9 +18,28 @@ public class UsuarioController : Controller
     {
         _usuarioService = usuarioService;
         _authenticate = authenticate;
-    }
-    
-    [HttpPost("registrar")]
+	}
+
+	/// <summary>
+	/// Registra um usuário
+	/// </summary>
+	/// <remarks>
+	/// {
+	///  "id": 0,
+	///  "nome": "string",
+	///  "email": "string",
+	///  "senha": "string"
+	/// }
+	/// </remarks>
+	/// <param name="usuarioDto"></param>
+	/// <returns>Token de acesso</returns>
+	/// <response code="400">Dados inválidos</response>
+	/// <response code="422">E-mail informado já cadastrado.</response>
+	/// <response code="201">Sucesso</response>
+	[HttpPost("registrar")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<UsuarioToken>> Incluir(UsuarioDTO usuarioDto)
     {
         if (usuarioDto == null)
@@ -31,7 +50,7 @@ public class UsuarioController : Controller
         var emailExiste = await _authenticate.UserExist(usuarioDto.Email);
         if (emailExiste)
         {
-            return BadRequest("Esse e-mail possui um cadastro.");
+            return UnprocessableEntity("Esse e-mail possui um cadastro.");
         }
         
         UsuarioDTO usuarioInseridoDTO = await _usuarioService.Incluir(usuarioDto);
@@ -46,13 +65,24 @@ public class UsuarioController : Controller
         };
     }
 
+    /// <summary>
+    /// Efetua login na API.
+    /// </summary>
+    /// <param name="loginModel"></param>
+    /// <returns>Nada.</returns>
+    /// <response code="404">Usuário não encontrado.</response>
+    /// <response code="401">E-mail ou senha inválidos.</response>
+    /// <response code="200">Sucesso</response>
     [HttpPost("login")]
-    public async Task<ActionResult<UsuarioToken>> Selecionar(LoginModel loginModel)
+	[ProducesResponseType(StatusCodes.Status404NotFound)]
+	[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+	[ProducesResponseType(StatusCodes.Status200OK)]
+	public async Task<ActionResult<UsuarioToken>> Selecionar(LoginModel loginModel)
     {
         var usuarioExiste = await _authenticate.UserExist(loginModel.email);
         if (!usuarioExiste)
         {
-            return Unauthorized("Usuário não existe.");
+            return NotFound("Usuário não existe.");
         }
 
         var result = await _authenticate.AuthenticateAsync(loginModel.email, loginModel.senha);
